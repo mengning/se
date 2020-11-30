@@ -133,6 +133,7 @@
 ```
 #### 从分析到设计的基本方法
 
+* [从需求分析到软件设计.pptx](https://gitee.com/mengning997/se/raw/master/ppt/%E4%BB%8E%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%88%B0%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1.pptx)
 * 目录
 ```
 9.获取需求的主要方法
