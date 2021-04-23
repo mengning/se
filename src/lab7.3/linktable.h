@@ -27,7 +27,12 @@
 #define FAILURE (-1)
 
 /*
- * LinkTable Node Type
+ * LinkTable Node Head Type, example as below:
+ * typedef struct UserNode
+ * {
+ *     tLinkTableNode head;
+ *     tUserData data;
+ * }tUserNode;
  */
 typedef struct LinkTableNode tLinkTableNode;
 
