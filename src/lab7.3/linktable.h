@@ -27,9 +27,9 @@
 #define FAILURE (-1)
 
 /*
- * LinkTable Node Head Type
+ * LinkTable Node Type
  */
-typedef struct LinkTableNode tLinkTableNodeHead;
+typedef struct LinkTableNode tLinkTableNode;
 
 /*
  * LinkTable Type
