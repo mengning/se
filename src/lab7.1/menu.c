@@ -42,7 +42,7 @@ typedef struct DataNode
     int     (*handler)();
 } tDataNode;
 
-int SearchConditon(tLinkTableNode * pLinkTableNode,void * arg)
+int SearchCondition(tLinkTableNode * pLinkTableNode,void * arg)
 {
     char * cmd = (char*)arg;
     tDataNode * pNode = (tDataNode *)pLinkTableNode;
@@ -115,7 +115,7 @@ int ExecuteMenu()
         char cmd[CMD_MAX_LEN];
         printf("Input a cmd number > ");
         scanf("%s", cmd);
-        tDataNode *p = (tDataNode*)SearchLinkTableNode(head,SearchConditon,(void*)cmd);
+        tDataNode *p = (tDataNode*)SearchLinkTableNode(head,SearchCondition,(void*)cmd);
         if( p == NULL)
         {
             printf("This is a wrong cmd!\n ");

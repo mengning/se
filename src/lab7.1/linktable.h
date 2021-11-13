@@ -58,9 +58,9 @@ int AddLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
 int DelLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
 /*
  * Search a LinkTableNode from LinkTable
- * int Conditon(tLinkTableNode * pNode,void * args);
+ * int Condition(tLinkTableNode * pNode,void * args);
  */
-tLinkTableNode * SearchLinkTableNode(tLinkTable *pLinkTable, int Conditon(tLinkTableNode * pNode, void * args), void * args);
+tLinkTableNode * SearchLinkTableNode(tLinkTable *pLinkTable, int Condition(tLinkTableNode * pNode, void * args), void * args);
 /*
  * get LinkTableHead
  */

@@ -159,7 +159,7 @@ tLinkTableNode * SearchLinkTableNode(tLinkTable *pLinkTable,
                         int Condition(tLinkTableNode * pNode, void * args),
                         void * args)
 {
-    if(pLinkTable == NULL || Conditon == NULL)
+    if(pLinkTable == NULL || Condition == NULL)
     {
         return NULL;
     }
