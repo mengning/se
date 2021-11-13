@@ -15,7 +15,7 @@
 /*
  * Revision log:
  *
- * Created by Mengning,2012/12/30
+ * Created by Mengning, 2012/12/30
  * modified by Mengning, 2021/04/23
  *
  */
@@ -52,14 +52,14 @@ int DeleteLinkTable(tLinkTable *pLinkTable);
 /*
  * Add a LinkTableNode to LinkTable
  */
-int AddLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
+int AddLinkTableNode(tLinkTable *pLinkTable, tLinkTableNode * pNode);
 /*
  * Delete a LinkTableNode from LinkTable
  */
-int DelLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
+int DelLinkTableNode(tLinkTable *pLinkTable, tLinkTableNode * pNode);
 /*
  * Search a LinkTableNode from LinkTable
- * int Condition(tLinkTableNode * pNode,void * args);
+ * int Condition(tLinkTableNode * pNode, void * args);
  */
 tLinkTableNode * SearchLinkTableNode(tLinkTable *pLinkTable, int Condition(tLinkTableNode * pNode, void * args), void * args);
 

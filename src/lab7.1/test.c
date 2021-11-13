@@ -11,8 +11,8 @@ int Quit()
 int main()
 {
 
-    MenuConfig("version","XXX V1.0(Menu program v1.0 inside)",NULL);
-    MenuConfig("quit","Quit from XXX",Quit);
+    MenuConfig("version", "XXX V1.0(Menu program v1.0 inside)", NULL);
+    MenuConfig("quit", "Quit from XXX", Quit);
     
     ExecuteMenu();
 }

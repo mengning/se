@@ -3,7 +3,7 @@
 
 #define debug
 
-int results[3] = {1,1,1};
+int results[3] = {1, 1, 1};
 char * info[3] =
 {
     {"test report"},
@@ -21,7 +21,7 @@ int main()
         results[1] = 1;
     }
     tLinkTableNode * pNode = NULL;   
-    int ret = AddLinkTableNode(p,pNode);
+    int ret = AddLinkTableNode(p, pNode);
     if(ret == FAILURE)
     {
         debug("TC2.1 Succ\n");
@@ -35,7 +35,7 @@ int main()
     {
         if(results[i] == 1)
         {
-            printf("Testcase Number%d F - %s\n",i,info[i]);
+            printf("Testcase Number%d F - %s\n", i, info[i]);
         }
     }
 }

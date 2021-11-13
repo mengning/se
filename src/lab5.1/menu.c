@@ -56,7 +56,7 @@ int SearchCondition(tLinkTableNode * pLinkTableNode)
 /* find a cmd in the linklist and return the datanode pointer */
 tDataNode* FindCmd(tLinkTable * head, char * cmd)
 {
-    return  (tDataNode*)SearchLinkTableNode(head,SearchCondition);
+    return  (tDataNode*)SearchLinkTableNode(head, SearchCondition);
 }
 
 /* show all cmd in listlist */
@@ -66,7 +66,7 @@ int ShowAllCmd(tLinkTable * head)
     while(pNode != NULL)
     {
         printf("%s - %s\n", pNode->cmd, pNode->desc);
-        pNode = (tDataNode*)GetNextLinkTableNode(head,(tLinkTableNode *)pNode);
+        pNode = (tDataNode*)GetNextLinkTableNode(head, (tLinkTableNode *)pNode);
     }
     return 0;
 }
@@ -78,17 +78,17 @@ int InitMenuData(tLinkTable ** ppLinktable)
     pNode->cmd = "help";
     pNode->desc = "Menu List:";
     pNode->handler = Help;
-    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    AddLinkTableNode(*ppLinktable, (tLinkTableNode *)pNode);
     pNode = (tDataNode*)malloc(sizeof(tDataNode));
     pNode->cmd = "version";
     pNode->desc = "Menu Program V1.0";
     pNode->handler = NULL; 
-    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    AddLinkTableNode(*ppLinktable, (tLinkTableNode *)pNode);
     pNode = (tDataNode*)malloc(sizeof(tDataNode));
     pNode->cmd = "quit";
     pNode->desc = "Quit from Menu Program V1.0";
     pNode->handler = Quit; 
-    AddLinkTableNode(*ppLinktable,(tLinkTableNode *)pNode);
+    AddLinkTableNode(*ppLinktable, (tLinkTableNode *)pNode);
  
     return 0; 
 }

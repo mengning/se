@@ -45,7 +45,7 @@ typedef struct DataNode
     int     (*handler)(int argc, char *argv[]);
 } tDataNode;
 
-int SearchCondition(tLinkTableNode * pLinkTableNode,void * arg)
+int SearchCondition(tLinkTableNode * pLinkTableNode, void * arg)
 {
     char * cmd = (char*)arg;
     tDataNode * pNode = (tDataNode *)pLinkTableNode;
@@ -65,7 +65,7 @@ tDataNode* FindCmd(tLinkTable * head, char * cmd)
         {
             return  pNode;  
         }
-        pNode = (tDataNode*)GetNextLinkTableNode(head,(tLinkTableNode *)pNode);
+        pNode = (tDataNode*)GetNextLinkTableNode(head, (tLinkTableNode *)pNode);
     }
     return NULL;
 }
@@ -77,7 +77,7 @@ int ShowAllCmd(tLinkTable * head)
     while(pNode != NULL)
     {
         printf("%s - %s\n", pNode->cmd, pNode->desc);
-        pNode = (tDataNode*)GetNextLinkTableNode(head,(tLinkTableNode *)pNode);
+        pNode = (tDataNode*)GetNextLinkTableNode(head, (tLinkTableNode *)pNode);
     }
     return 0;
 }
@@ -99,13 +99,13 @@ int MenuConfig(char * cmd, char * desc, int (*handler)(int argc, char*argv[]))
         pNode->cmd = "help";
         pNode->desc = "Menu List:";
         pNode->handler = Help;
-        AddLinkTableNode(head,(tLinkTableNode *)pNode);
+        AddLinkTableNode(head, (tLinkTableNode *)pNode);
     }
     pNode = (tDataNode*)malloc(sizeof(tDataNode));
     pNode->cmd = cmd;
     pNode->desc = desc;
     pNode->handler = handler; 
-    AddLinkTableNode(head,(tLinkTableNode *)pNode);
+    AddLinkTableNode(head, (tLinkTableNode *)pNode);
     return 0; 
 }
 
@@ -127,19 +127,19 @@ int ExecuteMenu()
 			continue;
 		}
         /* convert cmd to argc/argv */
-		pcmd = strtok(pcmd," ");
+		pcmd = strtok(pcmd, " ");
 		while(pcmd != NULL && argc < CMD_MAX_ARGV_NUM)
 		{
 			argv[argc] = pcmd;
 			argc++;
-			pcmd = strtok(NULL," ");
+			pcmd = strtok(NULL, " ");
 		}
         if(argc == 1)
         {
             int len = strlen(argv[0]);
             *(argv[0] + len - 1) = '\0';
         }
-        tDataNode *p = (tDataNode*)SearchLinkTableNode(head,SearchCondition,(void*)argv[0]);
+        tDataNode *p = (tDataNode*)SearchLinkTableNode(head, SearchCondition, (void*)argv[0]);
         if( p == NULL)
         {
             printf("This is a wrong cmd!\n ");

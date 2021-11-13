@@ -73,7 +73,7 @@ int ShowAllCmd(tDataNode * head)
 
 static tDataNode head[] = 
 {
-    {"help", "this is help cmd!", Help,&head[1]},
+    {"help", "this is help cmd!", Help, &head[1]},
     {"version", "menu program v1.0", NULL, NULL}
 };
 

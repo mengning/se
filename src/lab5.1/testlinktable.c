@@ -15,8 +15,8 @@
 /*
  * Revision log:
  *
- * Created by Mengning,2012/12/30
- * Verified callback and head/next for search by Mengning,2012/09/17
+ * Created by Mengning, 2012/12/30
+ * Verified callback and head/next for search by Mengning, 2012/09/17
  *
  */
 
@@ -46,17 +46,17 @@ int main()
         tNode* pNode = (tNode*)malloc(sizeof(tNode));
         pNode->data = i;
         debug("AddLinkTableNode\n");
-        AddLinkTableNode(pLinkTable,(tLinkTableNode *)pNode);
+        AddLinkTableNode(pLinkTable, (tLinkTableNode *)pNode);
     }
     /* search by callback */
     debug("SearchLinkTableNode\n");
-    tNode* pTempNode = (tNode*)SearchLinkTableNode(pLinkTable,SearchCondition);
-    printf("%d\n",pTempNode->data);
+    tNode* pTempNode = (tNode*)SearchLinkTableNode(pLinkTable, SearchCondition);
+    printf("%d\n", pTempNode->data);
     /* search one by one */
     pTempNode = Search(pLinkTable);
-    printf("%d\n",pTempNode->data);
+    printf("%d\n", pTempNode->data);
     debug("DelLinkTableNode\n");
-    DelLinkTableNode(pLinkTable,(tLinkTableNode *)pTempNode);
+    DelLinkTableNode(pLinkTable, (tLinkTableNode *)pTempNode);
     free(pTempNode);
     DeleteLinkTable(pLinkTable);
 }
@@ -72,7 +72,7 @@ tNode * Search(tLinkTable *pLinkTable)
             return  pNode;  
         }
         debug("GetNextLinkTableNode\n");
-        pNode = (tNode*)GetNextLinkTableNode(pLinkTable,(tLinkTableNode *)pNode);
+        pNode = (tNode*)GetNextLinkTableNode(pLinkTable, (tLinkTableNode *)pNode);
     }
     return NULL;
 }

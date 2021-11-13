@@ -15,8 +15,8 @@
 /*
  * Revision log:
  *
- * Created by Mengning,2012/12/30
- * Provide right Callback interface by Mengning,2012/09/17
+ * Created by Mengning, 2012/12/30
+ * Provide right Callback interface by Mengning, 2012/09/17
  *
  */
 
@@ -84,7 +84,7 @@ int DeleteLinkTable(tLinkTable *pLinkTable)
 /*
  * Add a LinkTableNode to LinkTable
  */
-int AddLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode)
+int AddLinkTableNode(tLinkTable *pLinkTable, tLinkTableNode * pNode)
 {
     if(pLinkTable == NULL || pNode == NULL)
     {
@@ -113,7 +113,7 @@ int AddLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode)
 /*
  * Delete a LinkTableNode from LinkTable
  */
-int DelLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode)
+int DelLinkTableNode(tLinkTable *pLinkTable, tLinkTableNode * pNode)
 {
     if(pLinkTable == NULL || pNode == NULL)
     {
@@ -164,7 +164,7 @@ tLinkTableNode * SearchLinkTableNode(tLinkTable *pLinkTable, int Condition(tLink
     tLinkTableNode * pNode = pLinkTable->pHead;
     while(pNode != NULL)
     {    
-        if(Condition(pNode,args) == SUCCESS)
+        if(Condition(pNode, args) == SUCCESS)
         {
             return pNode;				    
         }
@@ -188,7 +188,7 @@ tLinkTableNode * GetLinkTableHead(tLinkTable *pLinkTable)
 /*
  * get next LinkTableNode
  */
-tLinkTableNode * GetNextLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode)
+tLinkTableNode * GetNextLinkTableNode(tLinkTable *pLinkTable, tLinkTableNode * pNode)
 {
     if(pLinkTable == NULL || pNode == NULL)
     {

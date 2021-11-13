@@ -8,11 +8,11 @@ int Quit(int argc, char *argv[])
     exit(0);
 }
 
-int main(int argc,char* argv[])
+int main(int argc, char* argv[])
 {
 
-    MenuConfig("version","XXX V1.0(Menu program v1.0 inside)",NULL);
-    MenuConfig("quit","Quit from XXX",Quit);
+    MenuConfig("version", "XXX V1.0(Menu program v1.0 inside)", NULL);
+    MenuConfig("quit", "Quit from XXX", Quit);
     
     ExecuteMenu();
 }
