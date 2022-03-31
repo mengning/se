@@ -25,11 +25,11 @@
 #include<assert.h>
 #include"linktable.h"
 
-#define debug   
+#define debug printf  
 
 typedef struct Node
 {
-    tLinkTableNode * pNext;
+    tLinkTableNode head;
     int data;
 }tNode;
 
