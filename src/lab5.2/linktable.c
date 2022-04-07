@@ -20,23 +20,11 @@
  *
  */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <pthread.h>
-#include"linktable.h"
-
-/*
- * LinkTable Type
- */
-struct LinkTable
-{
-    tLinkTableNode *pHead;
-    tLinkTableNode *pTail;
-    int			SumOfNode;
-    pthread_mutex_t mutex;
-
-};
-
+#include "linktable.h"
 
 /*
  * Create a LinkTable

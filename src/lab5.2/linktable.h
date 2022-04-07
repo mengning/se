@@ -22,7 +22,7 @@
 #ifndef _LINK_TABLE_H_
 #define _LINK_TABLE_H_
 
-#include <pthread.h>
+#include "linktableInternal.h"
 
 #define SUCCESS 0
 #define FAILURE (-1)
@@ -30,10 +30,7 @@
 /*
  * LinkTable Node Type
  */
-typedef struct LinkTableNode
-{
-    struct LinkTableNode * pNext;
-}tLinkTableNode;
+typedef struct LinkTableNode tLinkTableNode;
 
 /*
  * LinkTable Type

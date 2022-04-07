@@ -22,6 +22,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "linktable.h"
 
 int Help();
@@ -36,7 +37,7 @@ int Quit();
 
 typedef struct DataNode
 {
-    tLinkTableNode * pNext;
+    tLinkTableNode head;
     char*   cmd;
     char*   desc;
     int     (*handler)();
@@ -98,7 +99,7 @@ int InitMenuData(tLinkTable ** ppLinktable)
 
 tLinkTable * head = NULL;
 
-main()
+int main()
 {
     InitMenuData(&head); 
    /* cmd line begins */
