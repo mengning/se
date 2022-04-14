@@ -20,10 +20,10 @@
  *
  */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <pthread.h>
-#include"linktable.h"
+#include "linktable.h"
 
 /*
  * LinkTable Type
