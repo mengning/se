@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "linklist.h"
 
 
@@ -33,7 +34,7 @@ tDataNode* FindCmd(tDataNode * head, char * cmd)
     tDataNode *p = head;
     while(p != NULL)
     {
-        if(!strcmp(p->cmd, cmd))
+        if(strcmp(p->cmd, cmd) == 0)
         {
             return p;
         }

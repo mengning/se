@@ -29,12 +29,13 @@
 
 typedef struct Node
 {
-    tLinkTableNode * pNext;
+    tLinkTableNode head;
     int data;
 }tNode;
 
 tNode * Search(tLinkTable *pLinkTable);
-int SearchCondition(tLinkTableNode * pLinkTableNode);
+int SearchCondition(tLinkTableNode * pLinkTableNode, void * args);
+
 
 int main()
 {
@@ -50,7 +51,8 @@ int main()
     }
     /* search by callback */
     debug("SearchLinkTableNode\n");
-    tNode* pTempNode = (tNode*)SearchLinkTableNode(pLinkTable, SearchCondition);
+    int num = 5;
+    tNode* pTempNode = (tNode*)SearchLinkTableNode(pLinkTable, SearchCondition, (void*)&num);
     printf("%d\n", pTempNode->data);
     /* search one by one */
     pTempNode = Search(pLinkTable);
@@ -77,10 +79,11 @@ tNode * Search(tLinkTable *pLinkTable)
     return NULL;
 }
 
-int SearchCondition(tLinkTableNode * pLinkTableNode)
+int SearchCondition(tLinkTableNode * pLinkTableNode, void * args)
 {
     tNode * pNode = (tNode *)pLinkTableNode;
-    if(pNode->data == 6)
+    int num = *(int*)args;
+    if(pNode->data == num)
     {
         return  SUCCESS;  
     }

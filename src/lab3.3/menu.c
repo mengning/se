@@ -38,7 +38,7 @@ static tDataNode head[] =
     {"version", "menu program v1.0", NULL, NULL}
 };
 
-main()
+int main()
 {
    /* cmd line begins */
     while(1)
