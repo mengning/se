@@ -37,7 +37,7 @@ int Help();
 
 typedef struct DataNode
 {
-    tLinkTableNode * pNext;
+    tLinkTableNode * head;
     char*   cmd;
     char*   desc;
     int     (*handler)();

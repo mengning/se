@@ -39,7 +39,7 @@ int Quit();
 
 typedef struct DataNode
 {
-    tLinkTableNode * pNext;
+    tLinkTableNode * head;
     char*   cmd;
     char*   desc;
     int     (*handler)(int argc, char *argv[]);
