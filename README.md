@@ -1,6 +1,6 @@
 # 软件工程
 
-《代码中的软件工程》一书的配套教学资料
+《[代码中的软件工程](https://www.epubit.com/bookDetails?id=UB7d4a0286a92ee&typeName=%E6%90%9C%E7%B4%A2)》一书的配套教学资料
 
 
 #### 介绍
