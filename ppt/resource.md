@@ -1,3 +1,3 @@
 # 其他资源
 
-* https://play.typeracer.com/
+* 打字练习网站 https://play.typeracer.com/
