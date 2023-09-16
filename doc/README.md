@@ -8,7 +8,7 @@ git pull
 ```
 * 二、为自己的工作创建一个分支，该分支应该只负责单一功能模块或代码模块的版本控制；
 ```
-git checkout -b mybranch
+git checkout -b YOUR_BRANCH
 git branch
 ```
 * 三、在该分支上完成某单一功能模块或代码模块的开发工作；多次进行如下操作：
@@ -20,7 +20,7 @@ git commit -m "commit log"
 ```
 git checkout master
 git pull
-git merge --no-ff mybranch
+git merge --no-ff YOUR_BRANCH
 git push
 ```
 * [Linux相关学习资料](https://gitee.com/mengning997/linuxkernel/tree/master/ppt)
