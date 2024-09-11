@@ -1,7 +1,7 @@
 ## 必备技能
 
-* [git团队开发操作流程](git.md)
-* [docker的基本用法](docker.md)
+* [Git团队开发操作流程](git.md)
+* [Docker的基本用法](docker.md)
 
 ### Links
 
